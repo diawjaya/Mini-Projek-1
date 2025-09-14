@@ -36,8 +36,12 @@ while(True):
         barang =float(input('Beratnya (kg)= '))
         if barang <= 5:
             adi5kg = input("Nama barang = ")
-            d5.remove(adi5kg)
-            print('[Barang Diambil]')
+            if adi5kg in d5:
+                d5.remove(adi5kg)
+                print('[Barang Diambil]')
+            else:
+                adi5kg not in d5
+                print('Barang tidak ada')
         elif barang <= 10:
             adi10kg = input("Nama barang = ")
             if adi10kg in d10:
